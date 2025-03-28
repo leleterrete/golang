@@ -8,5 +8,13 @@ package main
 	  fmt.Println("a multiplicação é:", a * b)
 	  fmt.Println("a divisão é:", a / b)
 	  fmt.Println("o resto da divisão é:",a % b)
+
+
+	  a++
+	  fmt.Println("incrementar a", a)
+
+	  if a > 0 && b > 0 {
+		fmt.Printf("numeros positivos")
+	  }
 	  }
 	  
