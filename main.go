@@ -1,16 +1,20 @@
 package main
- import "fmt"
- 
- func main(){
-	 var numero1 float32
-	 var numero2 float32
-	 fmt.Println("digite um numero :")
-	 fmt.Scan(&numero1)
-	 fmt.Println("digite outro numero:")
-	 fmt.Scan(&numero2)
-	 fmt.Println("a soma dos dois numeros é:", numero1 + numero2)
-	 fmt.Println("a subtração dos numeros é :", numero1 - numero2)
-	 fmt.Println("a multiplicação dos numeros é:",numero1 * numero2)
-	 fmt.Println("a divisão dos numeros é:", numero1 / numero2)
- }
 
+import "fmt"
+
+ func main(){
+	 var nome string
+	 var senha string
+	 fmt.Println(" digite seu nome de usuario:",nome )
+	 fmt.Scan(&nome)
+	 	if nome == "admin" {
+			fmt.Println("digite sua senha:", senha)
+			fmt.Scan(&senha) 
+			if senha == "1234" {
+				fmt.Println("acesso permitido")			
+			}else {
+			 fmt.Println("acesso negado")
+		}
+	}else {
+		fmt.Println("acesso negado")} 
+	}
