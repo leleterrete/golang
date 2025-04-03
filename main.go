@@ -3,18 +3,11 @@ package main
 import "fmt"
 
  func main(){
-	 var nome string
-	 var senha string
-	 fmt.Println(" digite seu nome de usuario:",nome )
-	 fmt.Scan(&nome)
-	 	if nome == "admin" {
-			fmt.Println("digite sua senha:", senha)
-			fmt.Scan(&senha) 
-			if senha == "1234" {
-				fmt.Println("acesso permitido")			
-			}else {
-			 fmt.Println("acesso negado")
-		}
-	}else {
-		fmt.Println("acesso negado")} 
-	}
+	var ages = [4]int{17,16,20,40}
+	nomes := [4]string{"Mario", "Luigi", "DeadPool", "Superman"}
+	fmt.Println(ages)
+	fmt.Println(nomes)
+    nomes[3] = " Clark Kent"
+	fmt.Println(nomes)
+}
+
