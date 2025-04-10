@@ -2,26 +2,23 @@ package main
 
 import (
 "fmt"
-"strings"
-"sort"
+
 )
 
  func main(){
-
-   greeting := "Hello my friends!"
-   fmt.Println(strings.Contains(greeting,"dog"))
-fmt.Println(strings.ReplaceAll(greeting,"my ","mine "))
-fmt.Println(strings.ToUpper(greeting))
-fmt.Println(strings.Index(greeting,"my"))
-fmt.Println(strings.Split(greeting," "))
-ages := []int{50,80,10}
-sort.Ints(ages)
+var ages[5]int 
+fmt.Println("digite o primeiro numero: ")
+fmt.Scan(&ages[0])
+fmt.Println("digite o segundo numero: ")
+fmt.Scan(&ages[1])
+fmt.Println("digite o terceiro numero: ")
+fmt.Scan(&ages[2])
+fmt.Println("digite o quarto numero: ")
+fmt.Scan(&ages[3])
+fmt.Println("digite o quinto numero: ")
+fmt.Scan(&ages[4])
 fmt.Println(ages)
-index := sort.SearchInts(ages,50)
-fmt.Println(index)
-names :=[]string{"Caroline", "Maicon", "Diego"}
-sort.Strings(names)
-fmt.Println(names)
-fmt.Println(sort.SearchStrings(names,"Caroline"))
-}
-
+ var soma int
+ soma = ages[0]+ages[1]+ages[2]+ages[3]+ages[4]
+fmt.Println("a soma é:",soma)
+ }
