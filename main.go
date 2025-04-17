@@ -4,67 +4,34 @@ import (
 	"fmt"
 )
 
-var saldo float64
-var decisão1 float64
-var newOPR float64
+func dividir(dividendo int, divisor int)(int, string){
+    if divisor == 0 {
+        return 0, "Erro na divisão por zero"
+    }
+    return dividendo / divisor, "Sem erro" 
 
-func decisão() {
-    fmt.Println("O que você deseja fazer?\n1-depositar\n2-sacar\n3-versaldo")
-    fmt.Scan(&decisão1)
-    if decisão1 == 1 {
-        addValor()
-    }else if decisão1 == 2 {
-        Saque()
-    }else if decisão1 == 3 {
-        VerSaldo()
+  }
+  func operacaoBasica(a int, b int ) (int , int ,int ){
+    soma := a+b
+    multiplicacao := a * b
+    subtracao := a - b 
+    return soma , multiplicacao , subtracao
+
+  }
+
+  func main(){
+    resultado, erro := dividir(10,2)
+
+    if erro != "Sem erro"{
+        fmt.Println(erro)
     }else {
-        fmt.Println("Ação inexistente ")
+        fmt.Println("O resultado da  divisão é :", resultado)
     }
-}
+    soma , mult , sub := operacaoBasica(10,2)
+    fmt.Println(soma)
+    fmt.Println(mult)
+    fmt.Println(sub)
 
-func VerSaldo() {
-    fmt.Println("Seu saldo é:", saldo)
-}
-func main() {
-    saldo = 240
-   fmt.Println("Seu saldo é:", saldo)
-   decisão()
-   for {
-    fmt.Println("Você deseja realizar uma nova operação? 1-Sim 2-Não")
-    fmt.Scan(&newOPR)
-    if newOPR == 1 {
-        decisão()
-    }else if newOPR==2 { 
-        break
-    }else { 
-        fmt.Println("Ação invalida")
-    }
-   } 
-}
-func addValor(){
-    var dep float64
-fmt.Println("Qual valor você quer depositar?")
-fmt.Scan(&dep) 
-if dep <= 0 {
-    fmt.Println("Impossivel depositar valores menores ou iguais a 0")
-}else {
-    saldo = saldo + dep 
-    fmt.Println("Seu novo saldo é:", saldo )
-}
-
-}
-
-  func Saque(){
-    var saque float64
-    fmt.Println("Qual valor você quer sacar?")
-fmt.Scan(&saque)
-if saque <= 0 || saque > saldo {
-    fmt.Println("É impossivel sacar")
-}else {
-    saldo = saldo - saque 
-    fmt.Println("Seu novo saldo é", saldo )
-}
-  
   }
 
 
