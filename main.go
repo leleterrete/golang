@@ -4,27 +4,23 @@ import (
 	"fmt"
 )
 
-func dadosPessoa(nome string, idade int) (int, string) {
-    if idade > 18 {
-        fmt.Println("Você é maior de idade")
-    }else
-    if idade <= 17{
-        fmt.Println("Você é menor de idade") 
-    }
-    return idade, nome
-  } 
-  
-
   func main(){
-    var idade int 
-    var nome string
+    alunoIdade := make(map[string]int)
+    alunoIdade["Bruno"] = 15
+    alunoIdade["Otavio"]= 16
+    alunoIdade["Fabiano"] = 40
+    alunoIdade["Isabela"] = 15
+    fmt.Println("Idade do Bruno", alunoIdade["Bruno"])
+    notasAlunos :=map[string]float64{
+        "Bruno" : 9.7,
+        "Otavio" :10,
+        "Fabiano":8.7,
+        "Isabela": 9.5,
 
-    fmt.Println("Digite sua idade:")
-    fmt.Scan(&idade)
-    fmt.Println("Sua idade é: ", idade)
-    fmt.Println("Qual o seu nome?")
-    fmt.Scan(&nome)
-     dadosPessoa(nome, idade)
+    }
+    for k, v:= range notasAlunos {
+        fmt.Printf("%s tirou a nota % 1.f ", k ,v )
+    }
   }
 
 
