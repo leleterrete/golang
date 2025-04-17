@@ -4,34 +4,27 @@ import (
 	"fmt"
 )
 
-func dividir(dividendo int, divisor int)(int, string){
-    if divisor == 0 {
-        return 0, "Erro na divisão por zero"
+func dadosPessoa(nome string, idade int) (int, string) {
+    if idade > 18 {
+        fmt.Println("Você é maior de idade")
+    }else
+    if idade <= 17{
+        fmt.Println("Você é menor de idade") 
     }
-    return dividendo / divisor, "Sem erro" 
-
-  }
-  func operacaoBasica(a int, b int ) (int , int ,int ){
-    soma := a+b
-    multiplicacao := a * b
-    subtracao := a - b 
-    return soma , multiplicacao , subtracao
-
-  }
+    return idade, nome
+  } 
+  
 
   func main(){
-    resultado, erro := dividir(10,2)
+    var idade int 
+    var nome string
 
-    if erro != "Sem erro"{
-        fmt.Println(erro)
-    }else {
-        fmt.Println("O resultado da  divisão é :", resultado)
-    }
-    soma , mult , sub := operacaoBasica(10,2)
-    fmt.Println(soma)
-    fmt.Println(mult)
-    fmt.Println(sub)
-
+    fmt.Println("Digite sua idade:")
+    fmt.Scan(&idade)
+    fmt.Println("Sua idade é: ", idade)
+    fmt.Println("Qual o seu nome?")
+    fmt.Scan(&nome)
+     dadosPessoa(nome, idade)
   }
 
 
