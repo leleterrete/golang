@@ -4,24 +4,21 @@ import (
 	"fmt"
 )
 
-
 func main() {
- capitais := map[string]string{
-  "SP" : "São Paulo",
-  "RJ" : "Rio de Janeiro",
-  "ES" : "Espirito Santo",
-  "AC" : "Acre",
- }
- capitais["BH"] = "Belo Horizonte "
- 
- for k,v :=range capitais{
-  fmt.Println("Sigla, nome",k,v)
- }
- delete(capitais,"AC")
- 
- for k,v := range capitais {
-  fmt.Println("Sigla,Nome",k,v)
- }
-}
+ estoque := map[string]int{
+  "Coxinha": 10,
+"Pão de queijo": 15,
+"Refrigerante": 20,
+  }
+  fmt.Println("ESTOQUE:")
+	for produto, quantidade := range estoque {
+		fmt.Printf("%s: %d\n", produto, quantidade)
+  }
+  estoque["Coxinha"] -= 2
+	estoque["Pão de queijo"] -= 1
 
-  
+  fmt.Println("ESTOQUE ATUALIZADO:")
+	for produto, quantidade := range estoque {
+		fmt.Printf("%s: %d\n", produto, quantidade)
+  }
+}
